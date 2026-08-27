@@ -8,7 +8,6 @@
 <body>
 
     <h1>Todo List</h1>
-
     <input
         type="text"
         id="taskinput"
@@ -16,7 +15,6 @@
     />
 
     <button onclick="addTask()">Add Task</button>
-
     <ul id="tasklist">Your tasks go here</ul>
 
     <script>
@@ -25,13 +23,11 @@
             const text = input.value.trim();
 
             console.log("The input value is: " + input.value);
-
             return text;
         }
 
         function addTask() {
             const taskText = getTaskText();
-
             if (taskText === "") {
                 return;
             }
@@ -44,12 +40,10 @@
 
         function addTaskItem(taskText) {
             const li = document.createElement('li');
-
             const taskSpan = document.createElement('span');
             taskSpan.textContent = taskText;
 
             li.appendChild(taskSpan);
-
             document.getElementById('tasklist').appendChild(li);
         }
     </script>
