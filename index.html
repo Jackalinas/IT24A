@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Personal Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        /* Hero */
+        #home {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 100px 20px 50px;
+            background: linear-gradient(135deg, #0f172a, #172554);
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 7vw, 75px);
+            margin-bottom: 10px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero p {
+            font-size: 22px;
+            color: #cbd5e1;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #38bdf8;
+            color: #0f172a;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #7dd3fc;
+            transform: translateY(-3px);
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 50px;
+            color: #38bdf8;
+        }
+
+        /* About */
+        .about {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            color: #cbd5e1;
+            font-size: 18px;
+        }
+
+        /* Skills */
+        .skills-container {
+            max-width: 900px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .skill {
+            background: #1e293b;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+            background: #263449;
+        }
+
+        .skill h3 {
+            color: #38bdf8;
+        }
+
+        /* Projects */
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .project {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-8px);
+        }
+
+        .project h3 {
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        .project a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Contact */
+        #contact {
+            text-align: center;
+            background: #020617;
+        }
+
+        .contact-info {
+            color: #cbd5e1;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #020617;
+            color: #64748b;
+            border-top: 1px solid #1e293b;
+        }
+
+        /* Mobile */
+        @media (max-width: 700px) {
+            nav {
+                padding: 15px 5%;
+            }
+
+            nav ul {
+                gap: 12px;
+            }
+
+            nav ul li a {
+                font-size: 14px;
+            }
+
+            section {
+                padding: 80px 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">MyPortfolio</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home -->
+    <section id="home">
+        <div class="hero">
+            <h1>Hello, I'm <span>Your Name</span></h1>
+
+            <p>Web Developer | Designer | Programmer</p>
+
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about">
+            <p>
+                Hello! I'm Your Name, a passionate web developer who enjoys
+                creating beautiful, responsive, and user-friendly websites.
+                I love learning new technologies and turning ideas into
+                real-world projects.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <h2 class="section-title">My Skills</h2>
+
+        <div class="skills-container">
+
+            <div class="skill">
+                <h3>HTML</h3>
+                <p>Building structured websites</p>
+            </div>
+
+            <div class="skill">
+                <h3>CSS</h3>
+                <p>Creating modern designs</p>
+            </div>
+
+            <div class="skill">
+                <h3>JavaScript</h3>
+                <p>Adding interactive features</p>
+            </div>
+
+            <div class="skill">
+                <h3>UI/UX</h3>
+                <p>Designing user-friendly interfaces</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <h2 class="section-title">My Projects</h2>
+
+        <div class="projects-container">
+
+            <div class="project">
+                <h3>Project One</h3>
+
+                <p>
+                    A responsive website created using HTML, CSS,
+                    and JavaScript.
+                </p>
+
+                <a href="#" target="_blank">View Project →</a>
+            </div>
+
+            <div class="project">
+                <h3>Project Two</h3>
+
+                <p>
+                    A creative web application designed to provide
+                    a simple and enjoyable user experience.
+                </p>
+
+                <a href="#" target="_blank">View Project →</a>
+            </div>
+
+            <div class="project">
+                <h3>Project Three</h3>
+
+                <p>
+                    A personal project demonstrating my programming
+                    and web development skills.
+                </p>
+
+                <a href="#" target="_blank">View Project →</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2 class="section-title">Contact Me</h2>
+
+        <div class="contact-info">
+            <p>Email: your@email.com</p>
+            <p>Phone: +63 900 000 0000</p>
+        </div>
+
+        <a href="mailto:your@email.com" class="btn">
+            Send Me an Email
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Your Name. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Simple welcome message
+        console.log("Welcome to my portfolio!");
+    </script>
+
+</body>
+</html>
